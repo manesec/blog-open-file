@@ -1,0 +1,50 @@
+{
+  "inbounds": [
+    {
+      "port": 10808,   // Local Listen Port
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+      "settings": {
+        "auth": "noauth" 
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "V2RAY SERVER",
+            "port": V2RAY SERVER PORT,
+            "users": [
+              {
+                "alterId": 64,
+                "id": "aaaa-bbbb-cccc-dddd-eeee-ffff" // V2ray UUID
+              }
+            ]
+          }
+        ]
+      },
+      "tag": "VMESS",
+      "proxySettings": {
+          "tag": "SOCKS_PROXY"  
+        }
+    },
+    {
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "SOCKS PROXY SERVER",
+            "port": SOCKS PROXY PORT
+          }
+        ]
+      },
+      "tag": "SOCKS_PROXY"
+    }
+  ]
+}
