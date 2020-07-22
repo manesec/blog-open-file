@@ -1,0 +1,93 @@
+root@shamu:/ # cat /proc/bus/input/devices                                     
+I: Bus=0019 Vendor=0000 Product=0001 Version=0000
+N: Name="Power Button"
+P: Phys=LNXPWRBN/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+U: Uniq=
+H: Handlers=kbd event0 
+B: PROP=0
+B: EV=3
+B: KEY=100000 0 0 0
+
+I: Bus=0019 Vendor=0000 Product=0003 Version=0000
+N: Name="Sleep Button"
+P: Phys=LNXSLPBN/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+U: Uniq=
+H: Handlers=kbd event1 
+B: PROP=0
+B: EV=3
+B: KEY=4000 0 0 0 0
+
+I: Bus=0019 Vendor=0000 Product=0006 Version=0000
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
+U: Uniq=
+H: Handlers=kbd event2 
+B: PROP=0
+B: EV=3
+B: KEY=3e000b 0 0 0 0 0 0 0
+
+I: Bus=0000 Vendor=1234 Product=0002 Version=0001
+N: Name="gpio-keys"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input3
+U: Uniq=
+H: Handlers=kbd event3 
+B: PROP=0
+B: EV=23
+B: KEY=c0000 0 0 0
+B: SW=1
+
+I: Bus=0000 Vendor=1234 Product=0001 Version=0001
+N: Name="Android_Input"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input4
+U: Uniq=
+H: Handlers=sysrq rfkill kbd mouse0 event4 
+B: PROP=0
+B: EV=f
+B: KEY=420 0 10000 ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff fffffffe
+B: REL=140
+B: ABS=4600000 0
+
+root@shamu:/ # getevent /dev/input/event4                                  
+0001 014a 00000001
+0003 0035 00000591
+0003 0036 00000266
+0000 0002 00000000
+0000 0000 00000000
+0000 0002 00000000
+0000 0000 00000000
+0001 014a 00000000
+0003 0035 00000000
+0003 0036 00000000
+0000 0002 00000000
+0000 0000 00000000
+
+0001 014a 00000001
+0003 0035 000001a5
+0003 0036 00000101
+0000 0002 00000000
+0000 0000 00000000
+0000 0002 00000000
+0000 0000 00000000
+0001 014a 00000000
+0003 0035 00000000
+0003 0036 00000000
+0000 0002 00000000
+0000 0000 00000000
+
+0001 014a 00000001
+0003 0035 00000581
+0003 0036 0000003b
+0000 0002 00000000
+0000 0000 00000000
+0000 0002 00000000
+0000 0000 00000000
+0001 014a 00000000
+0003 0035 00000000
+0003 0036 00000000
+0000 0002 00000000
+0000 0000 00000000
