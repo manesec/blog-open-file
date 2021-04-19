@@ -53,7 +53,7 @@ You -> PerimeterX Bot Defender -> Chexx
 
 ![GG聊天记录](https://img.manesec.com/00/19.png)
 
-另外，GG的客服说不要用多个浏览器标签来打开Chexx，不然也会被封号。
+另外，GG的客服说**不要用多个浏览器标签来打开Chexx**，不然也会被封号。
 
 **改进**
 
