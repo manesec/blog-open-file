@@ -23,6 +23,13 @@
 - [speech-driven-animation](https://github.com/DinoMan/speech-driven-animation)  让图片讲话
 - [computervision-recipes](https://github.com/microsoft/computervision-recipes)  AI观察人类在做什么
 - [tesseract](https://github.com/tesseract-ocr/tesseract)  谷歌开源OCR工具
+- [pulse](https://github.com/adamian98/pulse) 低分辨率的自拍还原高分辨率的自拍
+- [avatarify-python](https://github.com/alievk/avatarify-python) 实时用一个人的照片讲话，可以用fake cam，和deep face差不多，但是他是实时的
+- [PaddleHub](https://github.com/PaddlePaddle/PaddleHub)  为开发者提供丰富的、高质量的、直接可用的预训练模型
+- [pymatting](https://github.com/pymatting/pymatting) AI自动抠图
+- [PaddleDetection](https://github.com/PaddlePaddle/PaddleDetection) 动态图的 Object detection 和 instance segmentation
+- [Anime2Sketch](https://github.com/Mukosame/Anime2Sketch) 一张照片边手绘素描
+- [pytorch-captcha-recognition](https://github.com/dee1024/pytorch-captcha-recognition)  验证码识别
 
 ## Linux
 
@@ -35,6 +42,7 @@
 - [cowrie](https://github.com/cowrie/cowrie)  SSH蜜罐
 - [nbconvert](https://github.com/jupyter/nbconvert)  Ipynb 转换html or pdf 工具
 - [vncdotool](https://github.com/sibson/vncdotool)  VNC命令行自动化工具
+- [acme.sh](https://github.com/acmesh-official/acme.sh) 申请证书的工具
 
 ## Windows
 
@@ -75,6 +83,7 @@
 - [remove-web-limits](https://github.com/Cat7373/remove-web-limits)  解除网页限制
 - [animateplus](https://github.com/bendc/animateplus) 动画js插件
 - [pace](https://github.com/CodeByZach/pace)  载入滚动条js插件
+- [EnlighterJS](https://github.com/EnlighterJS/EnlighterJS) 新一代的js代码显示框
 
 ## PHP
 
@@ -118,6 +127,8 @@
 - [mtg](https://github.com/9seconds/mtg)  tg代理
 - [richdocuments](https://github.com/nextcloud/richdocuments) Collabora 在线多人协作
 - [netdata](https://github.com/netdata/netdata)  实时性能监视器
+- [ClickHouse](https://github.com/ClickHouse/ClickHouse) 新型数据库，据说优化很好
+- [vlmcsd](https://github.com/kkkgo/vlmcsd) 微软KMS服务器
 
 ## Networking / VPN
 
@@ -125,7 +136,6 @@
 - [Netch](https://github.com/NetchX/Netch)  全局VPN，类似于SS-Tap
 - [go-tun2socks](https://github.com/eycorsican/go-tun2socks)  配置本地连接端，全局VPN的工具
 - [pingtunnel](https://github.com/esrrhs/pingtunnel)  ICMP 流量伪装转发工具
-- [free](https://github.com/freefq/free)  免费VPN节点
 - [china_ip_list](https://github.com/17mon/china_ip_list)  中国IP列表
 - [SSTap-beta-setup](https://github.com/mayunbaba2/SSTap-beta-setup)  SSTap各个版本
 - [new-pac](https://github.com/Alvin9999/new-pac)  PAC文件
@@ -139,6 +149,8 @@
 - [v2ray-core](https://github.com/v2fly/v2ray-core)  V2ray核心
 - [jsproxy](https://github.com/EtherDream/jsproxy)  前端js代理
 - [finalspeed-91yun](https://github.com/sync4git/finalspeed-91yun)  暴力发包工具
+- [Qv2ray](https://github.com/Qv2ray/Qv2ray)  支持很多类型集合的连接器
+- [trojan-go](https://github.com/p4gefau1t/trojan-go) Go 实现的 Trojan 代理，速度很快
 
 ## Switch
 
@@ -180,6 +192,8 @@
 - [dbeaver](https://github.com/dbeaver/dbeaver)  新一代免费数据库连接器
 - [scrcpy](https://github.com/Genymobile/scrcpy)  显示和控制安卓设备
 - [obs-virtual-cam](https://github.com/CatxFish/obs-virtual-cam) OBS虚拟摄像头工具
+- [HEIF-Utility](https://github.com/liuziangexit/HEIF-Utility) 苹果图片格式HEIF转JPG和PNG的工具
+- [Airtest](https://github.com/AirtestProject/Airtest) 网易云出的自动化工具，支持多个平台，很强
 
 ## Resource
 
