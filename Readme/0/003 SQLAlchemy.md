@@ -20,6 +20,12 @@ sudo apt-get install libmysqlclient-dev python-dev
 pip3 install mysqlclient
 ```
 
+## 依赖安装
+
+```bash
+pip3 install async-exit-stack async-generator
+```
+
 ## Core VS ORM
 
 传统比较底层的用法，缺点是很容易会有`SQL注入`和报错。
@@ -173,5 +179,70 @@ Base.metadata.create_all(myconnect)
 session = Session(myconnect)
 session.add(squidward)
 session.commit()
+```
+
+##  Simple Example : FastAPI + SQLAlchemy 支持
+
+```python
+# main.py
+from fastapi import FastAPI
+import account.account as account
+
+app = FastAPI()
+app.include_router(account.router,prefix="/account")
+```
+
+```python
+# account.py
+from fastapi import APIRouter,Depends
+from sqlalchemy.orm import Session
+from account import model
+
+router = APIRouter()
+
+# Dependency
+def get_db():
+    db = model.SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+@router.on_event("startup")
+def on_startup():
+    print("MANE: Starting Account Server")
+
+@router.on_event("shutdown")
+def on_shutdown():
+    print("MANE: Stoping Account Server")
+
+@router.get("/test")
+def test(db: Session = Depends(get_db)):
+    db.query(model.User)
+    new_user = model.User(name="mane",fullname="manefull")
+    db.add(new_user)
+    db.commit()
+    db.refresh(new_user)
+    return "ok"
+```
+
+```python
+# model.py
+from sqlalchemy.orm import registry
+from sqlalchemy import Column,String,Integer
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
+
+base = registry().generate_base()
+
+class User(base):
+    __tablename__ = "username"
+    id = Column(Integer, primary_key=True)
+    name = Column(String(30))
+    fullname = Column(String(30))
+
+myconnect = create_engine("mysql://manetest:manetest@localhost/manetest")
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=myconnect)
+base.metadata.create_all(myconnect)
 ```
 
