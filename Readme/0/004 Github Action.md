@@ -107,14 +107,6 @@ Ethernet adapter vEthernet (nat):
 
 所以一会如果开启了RDP就要经过转发，有本地ipv6，但是没有公网ipv6。
 
-### 创建登录管理员账号
-
-```powershell
-net config server /srvcomment:"Windows Azure VM" 
-net user mane maneloveyou /add 
-net localgroup administrators mane /add 
-```
-
 ### 关闭密码复杂性
 
 如果你使用弱密码，Windows 10 会自动提醒你。操作系统会提醒你的密码不符合复杂性要求。因此，系统会提示你创建新密码。
@@ -124,6 +116,14 @@ secedit /export /cfg c:\secpol.cfg
 (gc C:\secpol.cfg).replace("PasswordComplexity = 1", "PasswordComplexity = 0") | Out-File C:\secpol.cfg
 secedit /configure /db c:\windows\security\local.sdb /cfg c:\secpol.cfg /areas SECURITYPOLICY
 rm -force c:\secpol.cfg -confirm:$false
+```
+
+### 创建登录管理员账号
+
+```powershell
+net config server /srvcomment:"Windows Azure VM" 
+net user mane maneloveyou /add 
+net localgroup administrators mane /add 
 ```
 
 ### 杂项配置
